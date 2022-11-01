@@ -18,45 +18,45 @@
             <h3 class="header-box-left">Kalkulator kosztów dojazdu: </h3>
             <span class="form-one">
                 Średnie spalanie:<br>
-                <input type="number" name="średnie spalanie" min="1" id="avarage-combustion" class="control"
-                    placeholder="Ile twój samochód zwykle spala?" onfocus="this.placeholder= ''" required />L/100KM
+                <input type="text" name="średnie spalanie" id="avarage-combustion" class="control"
+                    placeholder="Ile samochód spala?" onfocus="this.placeholder= ''" required />L/100KM
             </span>
             <span class="form-two">
                 Koszt paliwa:<br>
-                <input type="number" name="Koszt paliwa" min="1" id="fuel-cost" class="control"
+                <input type="text" name="Koszt paliwa" id="fuel-cost" class="control"
                     placeholder="wpisz cene za litr paliwa" onfocus="this.placeholder= ''" required />ZŁ
             </span>
             <span class="form-three">
                 Długość trasy:<br>
-                <input type="number" name="Długość trasy" min="1" id="route-length" class="control"
-                    placeholder="Napisz ile kilometrów będzie wynosić podróż" onfocus="this.placeholder= ''"
-                    required />KM
+                <input type="text" name="Długość trasy" id="route-length" class="control"
+                    placeholder="Ile kilometrów wynosi podróż?" onfocus="this.placeholder= ''" required />KM
             </span>
             <span class="form-four">
                 Dodatkowe koszty przejazdu:<br>
-                <input type="number" name="Dodatkowe koszty przejazdu" min="1" id="extra-costs" class="control"
+                <input type="text" name="Dodatkowe koszty przejazdu" id="extra-costs" class="control"
                     placeholder="dodatkowe opłaty?" onfocus="this.placeholder= ''" required />ZŁ
             </span>
-            <input type="submit" onclick="multiply()" value="Oblicz" class="a-button-average-cost-equal">
-            <span class='formOne-result' id="result">Wynik tu się pojawi</span>
+            <input type="submit" onclick="multiply()" value='Oblicz' class="a-button-average-cost-equal">
+            <span class='formOne-result' id="resultCostTravel"></span>
             <h3 class="header-box-right">Kalkulator średniego spalania: </h3>
             <span class="form-five">
                 Spalone paliwo w litrach:<br>
-                <input type="number" value="" name="średnie spalanie" min="0" id="avarage-combustion-inLiters"
-                    class="control" placeholder="120 " onfocus="this.placeholder= ''" />L
+                <input type="text" name="średnie spalanie" id="avarage-combustion-inLiters" class="control"
+                    placeholder="120 " onfocus="this.placeholder= ''" />L
             </span>
             <span class="form-six">
                 Ilość przejechanych kilometrów:<br>
-                <input type="number" value="" name="Koszt paliwa" min="0" id="route-length-inKm" class="control"
+                <input type="text" name="Koszt paliwa" id="route-length-Km" class="control"
                     placeholder="wpisz liczbę km" onfocus="this.placeholder= ''" />KM
             </span>
             <span class="form-seven">
                 Cena litra paliwa(opcjonalnie):<br>
-                <input type="number" value="" name="Długość trasy" min="0" id="liter-price" class="control"
-                    placeholder="" onfocus="this.placeholder= ''">ZŁ/L
+                <input type="text" name="Długość trasy" id="liter-price" class="control" placeholder=""
+                    onfocus="this.placeholder= ''">ZŁ/L
             </span>
-            <input type="submit" onclick="multiply()" value='Oblicz' class="a-button-average-combustion-equal">
-            <span class='formOne-result' id="result"></span>
+            <input type="submit" onclick="avarageCombustion()" value='Oblicz' class="a-button-average-combustion-equal">
+            <span class='formTwo-result' id="resultAvarageCombustion"></span>
+            <span class='formThree-result' id="resultCost"></span>
         </div>
     </main>
 
